@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>MyResume Bootstrap Template - Index</title>
+  <title>MyResume</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -78,7 +78,7 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p> suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
         <div class="row">
@@ -370,10 +370,13 @@
                 <div class="error-message">Non field:{{ form.field_errors }}</div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="error-message">success: { success }}</div>
-               
+              <div class="error-message">success: {{ success }}</div>
+              
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
+            {% if success is "sent" %}
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+            {% endif %}
 
           </div>
 

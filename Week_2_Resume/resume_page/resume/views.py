@@ -30,11 +30,11 @@ def contact_details(request):
             send_mail(subject, message, name, recipients)
             print('mail sent')
             form.save()
-            success= "Your message has been sent. Thank you!"
+            success= "sent"
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            return HttpResponseRedirect('/sent')
+            return HttpResponse('Success')
 
 
     # if a GET (or any other method) we'll create a blank form
